@@ -2,7 +2,7 @@ import { View, Text, StyleSheet,TouchableOpacity, Image } from 'react-native'
 import React from 'react'
 import stepimg from '../../../assest/slide6.png'
 import DotsIndicator from '../onboarding/DotsIndicator';
-import { flushValue } from 'react-native/types_generated/Libraries/Animated/nodes/AnimatedValue';
+
 const OnBoarding6 = () => {
   return (
     <View style={styles.container} >
@@ -74,7 +74,7 @@ const styles = StyleSheet.create({
 
     },
    bottomRow: {
-  marginTop: 'auto',          // pushes section to bottom
+  marginTop: 'auto',          
   alignItems: 'center',
   paddingVertical: 10,
   backgroundColor: 'rgba(153, 223, 255, 0.2)',
@@ -85,7 +85,7 @@ getBtn: {
   paddingHorizontal: 40,
   paddingVertical: 14,
   borderRadius: 8,
-  marginTop: 20,              // space between dots & button
+  marginTop: 20,              
 },
 
 getText: {
