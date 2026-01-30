@@ -4,7 +4,7 @@ import React, { useEffect } from 'react';
 import { useNavigation } from '@react-navigation/native';
 
 import back from '../../../assest/back.png';
-import mid from '../../../assest/mid.png';
+import logo from '../../../assest/logo.png';
 
 const { width, height } = Dimensions.get('window');
 
@@ -16,7 +16,7 @@ const SplashScreen = () => {
      // 3 sec after
     const timer = setTimeout(() => {
       navigation.replace('OnBoarding'); 
-    }, 300000);
+    }, 3000);
 
     return () => clearTimeout(timer); 
   }, []);
@@ -29,11 +29,11 @@ const SplashScreen = () => {
       style={styles.backg} 
       resizeMode="cover"        
     >
-      <Image source={mid} style={styles.mid} />
+      <Image source={logo} style={styles.logo} />
       
       <ActivityIndicator
         size="large"
-        color="#0A5ED7"
+        color="#0073AB"
         style={styles.loader}
       />
     </ImageBackground>
@@ -49,9 +49,10 @@ const styles = StyleSheet.create({
     height: height,
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor : 'rgba(194, 235, 255, 0.2)',
   },
 
-  mid: {
+  logo: {
     width: 230,
     height: 172,
     resizeMode: 'cover',

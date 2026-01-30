@@ -1,12 +1,23 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
-import CheckRoute from "./src/routes/CheckRoute"
+
+
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+
+import SplashScreen from './src/screens/auth/splashscreen/SplashScreen'
+import OnBoarding from './src/screens/auth/onboarding/OnBoarding'
+
+const Stack = createStackNavigator();
+
 const App = () => {
   return (
-    <>
-     <CheckRoute />
-    </>
-  )
-}
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="SplashScreen" screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="SplashScreen" component={SplashScreen} />
+        <Stack.Screen name="OnBoarding" component={OnBoarding} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+};
 
-export default App
+export default App;
